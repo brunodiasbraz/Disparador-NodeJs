@@ -18,7 +18,7 @@ Abrir o endereço no navegador para acessar a página inicial
 ### http://localhost:3000
 
 Comando SQL para criar a base de dados
-### CREATE DATABASE celke CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+### CREATE DATABASE disparador_nodejs CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
 Criar a Models users
 ### npx sequelize-cli model:generate --name Users --attributes cpf:string,nome:string,email:string,endereco:string
