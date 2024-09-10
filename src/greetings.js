@@ -10,7 +10,6 @@ function generateGreeting(template, data) {
 
 async function sendGreeting(name) {
   try {
-    // Seleciona todos os templates de saudação
     const templates = await db.Greeting_Template.findAll();
 
     if (templates.length === 0) {
@@ -20,15 +19,10 @@ async function sendGreeting(name) {
       };
     }
 
-    // Seleciona um template aleatório
     const randomTemplate =
       templates[Math.floor(Math.random() * templates.length)];
 
-    // Gera a mensagem personalizada
     const message = generateGreeting(randomTemplate.template, { name });
-
-    // Aqui você enviaria a mensagem (exemplo fictício)
-    // sendMessageToUser(name, message);
 
     return { status: "success", message: message };
   } catch (error) {
@@ -59,7 +53,6 @@ async function sendMessageToAPI(number, text) {
       },
     });
 
-    // Retornar a resposta da API
     return { status: "success", data: response.data };
   } catch (error) {
     console.error("Erro ao enviar mensagem:", error);
