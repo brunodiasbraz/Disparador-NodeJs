@@ -13,7 +13,7 @@ module.exports = (multer({
 
         // Local para salvar o arquivo
         destination: (req, file, cb) => {
-            cb(null, './public/upload/csv')
+            cb(null, path.join(__dirname, "../public/upload/csv"));
         },
 
         // Nome que deve ser atribuido ao arquivo
